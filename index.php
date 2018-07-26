@@ -21,7 +21,7 @@ class Car
     }
     else
     {
-      return $color;
+      return $this->color;
     }
   }
 }
