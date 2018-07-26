@@ -15,7 +15,7 @@ class Car
   public $type = 'sedan';
   public function getCar()
   {
-    if ($this->color)
+    if ($this->color == 'black')
     {
       return  $color = 'blue';
     }
