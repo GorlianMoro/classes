@@ -11,8 +11,19 @@ echo "У объектов есть следующие плюсы: <br>
 class Car
 {
   public $name;
-  public $color = 'black';
-  public $type = 'sedan';
+  public $color;
+  public $type;
+
+  public function __construct(
+    $name,
+    $color,
+    $type)
+  {
+    $this->name = $name;
+    $this->color = $color;
+    $this->type = $type;
+  }
+
   public function getCar()
   {
     if ($this->color == 'black')
@@ -26,14 +37,8 @@ class Car
   }
 }
 
-$lada = new Car();
-$lada->name = 'LadaNine';
-$lada->getCar() . '<br>';
-$lada->color;
-
-$reno = new Car();
-$reno->name = 'Renault_Megane';
-$reno->color ='gray';
+$lada = new Car('LadaNine', 'black', 'sedan');
+$reno = new Car('Renault_Megane', 'gray', 'sedan');
 
 echo $lada->name . '<br>';
 echo $lada->type . '<br>';
@@ -42,6 +47,7 @@ echo $lada->color . '<br>';
 
 echo $reno->name . '<br>';
 echo $reno->type . '<br>';
+echo $reno->getCar() . '<br>';
 echo $reno->color . '<br><br>';
 
 class Television
