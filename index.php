@@ -54,25 +54,27 @@ class Television
 {
   public $color;
   public $name;
-  public $diagonal = 28;
+  public $diagonal;
   public function getTelevision()
   {
     $this->diagonal = 32;
   }
   public function __construct(
     $color,
-    $name
+    $name,
+    $diagonal
     )
   {
     $this->color = $color;
     $this->name = $name;
+    $this->diagonal = $diagonal;
   }
 }
 
-$tv1 = new Television('gray', 'Samsung_bw265739');
+$tv1 = new Television('gray', 'Samsung_bw265739', '28');
 $tv1->diagonal;
 
-$tv2 = new Television('black', 'LG_hc6811387');
+$tv2 = new Television('black', 'LG_hc6811387', '28');
 $tv2->getTelevision();
 $tv2->diagonal;
 
